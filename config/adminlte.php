@@ -332,6 +332,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Reviews',
+            'url'  => 'reviews',
+            'icon' => 'fas fa-star-half-alt',
+        ],
+        [
             'text'       => 'Users',
             'icon' => 'fas fa-fw fa-users',
             'url'        => 'users',

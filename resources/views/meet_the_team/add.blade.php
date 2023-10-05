@@ -25,44 +25,46 @@
         <form class="form-horizontal" method="post" name="form1" id="form1" action="/saveTeamMember" enctype="multipart/form-data">
             @csrf
             <div class="box-body">
-                <div class="col-md-6">
-                    <div class="form-group col-md-12">
-                        <label for="name" class="control-label">Name</label>
-                        <input type="text" id="name" name="name" value="{{old('name')}}" class="form-control required" placeholder="Team Member Full Name" required>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group col-md-12">
+                            <label for="name" class="control-label">Name</label>
+                            <input type="text" id="name" name="name" value="{{old('name')}}" class="form-control required" placeholder="Team Member Full Name" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="title" class="control-label">Title</label>
+                            <input type="text" id="title" name="title" value="{{old('title')}}" class="form-control required" placeholder="Title" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="sequence" class="control-label">Sequence</label>
+                            <input type="number" id="sequence" min="0" name="sequence" value="{{old('sequence')}}" class="form-control required" placeholder="Sequence" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="leave_me_review_link" class="control-label">Leave Me a Review Link</label>
+                            <input type="text" id="leave_me_review_link" name="leave_me_review_link" value="{{old('leave_me_review_link')}}" class="form-control required" placeholder="Leave Me a Review Link" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="review_link" class="control-label">My Reviews Link</label>
+                            <input type="text" id="review_link" name="review_link" value="{{old('review_link')}}" class="form-control required" placeholder="My Reviews Link" required>
+                        </div>
                     </div>
-                    <div class="form-group col-md-12">
-                        <label for="title" class="control-label">Title</label>
-                        <input type="text" id="title" name="title" value="{{old('title')}}" class="form-control required" placeholder="Title" required>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="sequence" class="control-label">Sequence</label>
-                        <input type="number" id="sequence" min="0" name="sequence" value="{{old('sequence')}}" class="form-control required" placeholder="Sequence" required>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="leave_me_review_link" class="control-label">Leave Me a Review Link</label>
-                        <input type="text" id="leave_me_review_link" name="leave_me_review_link" value="{{old('leave_me_review_link')}}" class="form-control required" placeholder="Leave Me a Review Link" required>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="review_link" class="control-label">My Reviews Link</label>
-                        <input type="text" id="review_link" name="review_link" value="{{old('review_link')}}" class="form-control required" placeholder="My Reviews Link" required>
-                    </div>
-                </div>
-                <div class="col-md-6">
+                    <div class="col-md-6">
 
-                    <div class="form-group">
-                        <label for="profile_img_link" class="control-label">Headshot Image Link</label>
-                        <input type="text" id="profile_img_link" name="profile_img_link" value="{{old('profile_img_link')}}" class="form-control" placeholder="Headshot Image Link">
-                        <img id="profile_img" src="#" style="display:none;" class="col-md-4 preview-img" />
-                    </div>
-                    <a class="btn btn-default" onclick="previewImgLink('profile_img')">preview</a>
-                    <div class="form-group">
-                        <label for="review_link" class="control-label">or</label>
-                    </div>
-                    <div class="form-group">
-                        <img id="profile_image" src="#" style="display:none;" class="col-md-4 preview-img" />
-                        <div class="col-md-6 form-group">
-                            <label for="image">Upload Headshot Image</label>
-                            <input type="file" onchange="previewImage(event, 'profile_image')" class="form-control" id="profile_img" name="profile_img">
+                        <div class="form-group">
+                            <label for="profile_img_link" class="control-label">Headshot Image Link</label>
+                            <input type="text" id="profile_img_link" name="profile_img_link" value="{{old('profile_img_link')}}" class="form-control" placeholder="Headshot Image Link">
+                            <img id="profile_img" src="#" style="display:none;" class="col-md-4 preview-img" />
+                        </div>
+                        <a class="btn btn-default" onclick="previewImgLink('profile_img')">preview</a>
+                        <div class="form-group ml-2 mt-2">
+                            <label for="review_link" class="control-label">or</label>
+                        </div>
+                        <div class="form-group">
+                            <img id="profile_image" src="#" style="display:none;" class="col-md-4 preview-img" />
+                            <div class="col-md-6 form-group">
+                                <label for="image">Upload Headshot Image</label>
+                                <input type="file" onchange="previewImage(event, 'profile_image')" class="form-control" id="profile_img" name="profile_img">
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AirDuctCleaningController;
 use App\Http\Controllers\BusinessRulesController;
-use App\Http\Controllers\InsulationController;
+use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\ScheduleBookingController;
 use App\Http\Controllers\ZipcodesController;
 use App\Http\Controllers\ChangepasswordController;
@@ -86,3 +86,12 @@ Route::post('activateTeamMember/{id}', [MeetTheTeamController::class, 'activate'
 Route::post('updateTeamMember/{id}', [MeetTheTeamController::class, 'update'])->name('meettheteam.update')->middleware('auth');
 Route::get('meetTheTeam/{id}/edit', [MeetTheTeamController::class, 'edit'])->name('meettheteam.edit')->middleware('auth');
 Route::post('meetTheTeam/{id}/delete', [MeetTheTeamController::class, 'destroy'])->name('meettheteam.delete')->middleware('auth');
+
+
+Route::get('reviews', [ReviewsController::class, 'index'])->name('reviews')->middleware('auth');
+Route::post('getReviews', [ReviewsController::class, 'getReviews'])->name('reviews.datatable')->middleware('auth');
+Route::get('addReviw', [ReviewsController::class, 'create'])->name('reviews.add')->middleware('auth');
+Route::post('saveReview', [ReviewsController::class, 'store'])->name('reviews.save')->middleware('auth');
+Route::post('updateReview/{id}', [ReviewsController::class, 'update'])->name('reviews.update')->middleware('auth');
+Route::get('reviews/{id}/edit', [ReviewsController::class, 'edit'])->name('reviews.edit')->middleware('auth');
+Route::post('reviews/{id}/delete', [ReviewsController::class, 'destroy'])->name('reviews.delete')->middleware('auth');

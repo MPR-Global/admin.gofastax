@@ -16,11 +16,11 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body">
-                    <div class="box-footer">
+                    <div class="box-footer mb-2">
                         <a href="{{route('meettheteam.add')}}" class="btn btn-primary">Add Team Member</a>
                     </div>
                     <div class="table-responsive">
-                        <div class="pull-right">
+                        <div class="float-right  ml-2">
                             <input type="checkbox" id="deletedFilter">
                             <label for="deletedFilter">Show Deleted</label>
                         </div>
@@ -116,7 +116,7 @@
                             </form>`;
                         } else {
                             return ` <a href="meetTheTeam/${data.id}/edit" title="Edit Record" class="btn btn-sm btn-info">
-                                    <i class="fa fa-fw fa-pencil"></i>
+                                    <i class="fas fa-pencil-alt"></i>
                                 </a>
                                 <form method="POST" action="meetTheTeam/${data.id}/delete">
                                     @csrf
