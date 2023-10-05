@@ -166,7 +166,8 @@ class MeetTheTeamController extends Controller
             'sequence' => 'required|integer',
             'review_link' => 'required',
             'leave_me_review_link' => 'required',
-            'profile_img_new' => 'nullable|image',
+            'profile_img_new' => 'required_without:profile_img_link|image|nullable',
+            'profile_img_link' => 'required_without:profile_img_new',
         ]);
         $teamMember = MeetTheTeam::findOrFail($memberId);
         $teamMember->update($validatedData);
@@ -176,6 +177,8 @@ class MeetTheTeamController extends Controller
             $imgPath = Storage::disk('s3')->putFile('Headshots-images', $image);
             $imageName = Storage::disk('s3')->url($imgPath);
             $teamMember->profile_img = $imageName;
+        } else {
+            $teamMember->profile_img = $request->profile_img_link;
         }
         $teamMember->save();
 
