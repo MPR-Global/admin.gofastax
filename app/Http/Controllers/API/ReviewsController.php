@@ -20,7 +20,7 @@ class ReviewsController extends Controller
      */
     public function index(): Factory|JsonResponse|Application
     {
-        $items = Reviews::select('id','name','description','review_date')
+        $items = Reviews::select('id','name','description','review_date','image')
             ->orderByDesc('review_date')->paginate(10);
         return response()->json(['message' => 'Reviews', 'data' => compact('items')]);
     }
