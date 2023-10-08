@@ -306,31 +306,31 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-        [
-            'text'    => 'Business Rules',
-            'url'  => '',
-            'icon'    => 'fas fa-fw fa-list',
-        ],
-        [
-            'text'        => 'Schedule Bookings',
-            'url'         => 'schedule_bookings',
-            'icon'        => 'far fa-fw fa-file',
-        ],
-        [
-            'text'    => 'Schedule Bookings Graph',
-            'url'  => 'schedule_bookings_graph',
-            'icon'    => 'fas fa-fw fa-calendar',
-        ],
+        // [
+        //     'text'    => 'Business Rules',
+        //     'url'  => '',
+        //     'icon'    => 'fas fa-fw fa-list',
+        // ],
+        // [
+        //     'text'        => 'Schedule Bookings',
+        //     'url'         => 'schedule_bookings',
+        //     'icon'        => 'far fa-fw fa-file',
+        // ],
+        // [
+        //     'text'    => 'Schedule Bookings Graph',
+        //     'url'  => 'schedule_bookings_graph',
+        //     'icon'    => 'fas fa-fw fa-calendar',
+        // ],
         [
             'text'       => 'Meet The Team',
             'icon' => 'fas fa-fw fa-address-card',
             'url'        => 'meetTheTeam',
         ],
-        [
-            'text' => 'Zipcodes',
-            'url'  => 'zipcodes',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+        // [
+        //     'text' => 'Zipcodes',
+        //     'url'  => 'zipcodes',
+        //     'icon' => 'fas fa-fw fa-user',
+        // ],
         [
             'text' => 'Reviews',
             'url'  => 'reviews',
@@ -341,11 +341,11 @@ return [
             'icon' => 'fas fa-fw fa-users',
             'url'        => 'users',
         ],
-        [
-            'text'       => 'Email Receivers',
-            'icon' => 'fas fa-fw fa-envelope-open-text',
-            'url'        => 'email_receivers',
-        ],
+        // [
+        //     'text'       => 'Email Receivers',
+        //     'icon' => 'fas fa-fw fa-envelope-open-text',
+        //     'url'        => 'email_receivers',
+        // ],
         [
             'text' => 'change_password',
             'url'  => 'change_password',

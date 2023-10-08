@@ -32,7 +32,7 @@ Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::get('logout', [LoginController::class, 'signOut'])->name('logout');
 Route::post('authenticate', [LoginController::class, 'checklogin'])->name('authenticate');
 
-Route::get('/', [BusinessRulesController::class, 'index'])->name('business_rules')->middleware('auth');
+// Route::get('/', [BusinessRulesController::class, 'index'])->name('business_rules')->middleware('auth');
 Route::get('change_password', [ChangepasswordController::class, 'index'])->name('change_password')->middleware('auth');
 Route::get('change_pass', [ChangepasswordController::class, 'changepassword'])->name('change_pass')->middleware('auth');
 
@@ -77,6 +77,7 @@ Route::get('password', [ChangepasswordController::class, 'index'])->middleware('
 
 Route::get('schdeule_booking', [AdminController::class, 'schdeule_booking'])->name('schdeule_booking')->middleware('auth');
 
+Route::get('/', [MeetTheTeamController::class, 'index'])->name('meettheteam')->middleware('auth');
 Route::get('meetTheTeam', [MeetTheTeamController::class, 'index'])->name('meettheteam')->middleware('auth');
 Route::post('getTeamData', [MeetTheTeamController::class, 'getTeamData'])->name('meettheteam.datatable')->middleware('auth');
 Route::get('addTeamMember', [MeetTheTeamController::class, 'create'])->name('meettheteam.add')->middleware('auth');
