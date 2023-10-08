@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\APIController;
 use App\Http\Controllers\MeetTheTeamController;
+use App\Http\Controllers\API\ReviewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,4 @@ Route::post('getBusinessRules', [APIController::class, 'getBusinessRules']);
 Route::match(['get', 'post'], 'getZipdata', [APIController::class, 'getZipdata']);
 
 Route::post('meet-the-team', [MeetTheTeamController::class, 'getAllTeamMembers'])->name('meet-the-team');
+Route::get('getReviews',[ReviewsController::class,'index'])->name('reviews');
