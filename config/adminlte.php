@@ -326,11 +326,11 @@ return [
             'icon' => 'fas fa-fw fa-address-card',
             'url'        => 'meetTheTeam',
         ],
-        // [
-        //     'text' => 'Zipcodes',
-        //     'url'  => 'zipcodes',
-        //     'icon' => 'fas fa-fw fa-user',
-        // ],
+        [
+            'text' => 'Zipcodes',
+            'url'  => 'zipcodes',
+            'icon' => 'fas fa-fw fa-user',
+        ],
         [
             'text' => 'Reviews',
             'url'  => 'reviews',
