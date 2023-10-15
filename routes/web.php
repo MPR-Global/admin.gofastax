@@ -29,7 +29,7 @@ Route::get('/', function () {
 });
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
-Route::get('logout', [LoginController::class, 'signOut'])->name('logout');
+Route::post('logout', [LoginController::class, 'signOut'])->name('logout');
 Route::post('authenticate', [LoginController::class, 'checklogin'])->name('authenticate');
 
 // Route::get('/', [BusinessRulesController::class, 'index'])->name('business_rules')->middleware('auth');

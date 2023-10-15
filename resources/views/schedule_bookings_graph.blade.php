@@ -52,7 +52,7 @@ Appointments Schedule booking detail.
 			<input type="date" class="form-control text_box_area hasDatepicker" name="endDate" value="{{ date('Y-m-d', strtotime('+6 month')) }}" min="{{ date('Y-m-d', strtotime('+1 day')) }}" max="{{ date('Y-m-d', strtotime('+12 month')) }}" id="endDate" placeholder="End Date" style='width: 300px;' >
 			</div>
 			<div class="col-md-2">
-			<input type="submit" value="Submit Form" class="btn btn-success"> <i class="fa fa-refresh fa-spin" style="display:none;" id="page_load_div"></i>
+			<input type="submit" value="Submit Form" class="btn btn-success"> <i class="fa fa-sync-alt fa-spin" style="display:none;" id="page_load_div"></i>
 			</div>
 			</div>
 			<div class="row">

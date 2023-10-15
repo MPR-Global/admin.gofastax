@@ -316,11 +316,11 @@ return [
         //     'url'         => 'schedule_bookings',
         //     'icon'        => 'far fa-fw fa-file',
         // ],
-        // [
-        //     'text'    => 'Schedule Bookings Graph',
-        //     'url'  => 'schedule_bookings_graph',
-        //     'icon'    => 'fas fa-fw fa-calendar',
-        // ],
+        [
+            'text'    => 'Schedule Bookings Graph',
+            'url'  => 'schedule_bookings_graph',
+            'icon'    => 'fas fa-fw fa-calendar',
+        ],
         [
             'text'       => 'Meet The Team',
             'icon' => 'fas fa-fw fa-address-card',

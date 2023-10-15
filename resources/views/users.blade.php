@@ -45,7 +45,7 @@ Users
                               <td>{{$item->email}}</td>
                               <td>{{$item->name}}</td>
 					         <td><a href="edit_user/{{$item->id}}"> <i class="fa fa-fw fa-edit"></i></a></td>
-							<td><a href="delete_user/{{$item->id}}" onclick="javascript:return confirm('Are you sure! You want to delete');"><i class="fa fa-fw fa-trash-o"></i> </a></td>
+							<td><a href="delete_user/{{$item->id}}" onclick="javascript:return confirm('Are you sure! You want to delete');"><i class="fa fa-fw fa-trash"></i> </a></td>
 						  </tr>
 							</tr>
 							@endforeach
