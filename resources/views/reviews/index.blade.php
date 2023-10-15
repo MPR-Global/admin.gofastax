@@ -59,7 +59,7 @@
                 }
             },
             order: [
-                [3, 'asc']
+                [4, 'desc']
             ],
             columns: [{
                     data: 'id',
@@ -72,6 +72,8 @@
                 },
                 {
                     data: 'image',
+                    orderable: false,
+                    searchable: false,
                 },
                 {
                     data: 'review_date',

@@ -18,15 +18,15 @@ class APIController extends Controller
         $dryerVent = DryerVentCleaningRules::get();
         $exitPoints = DryerVentExitPointEnum::cases();
         $numFurnaces = NumberOfFurnaceEnum::cases();
-        return response()->json(array("airDuct"=>$airDuct, "dryerVent"=>$dryerVent, "exitPoints"=>$exitPoints, "numFurnaces"=>$numFurnaces));
+        return response()->json(array("airDuct" => $airDuct, "dryerVent" => $dryerVent, "exitPoints" => $exitPoints, "numFurnaces" => $numFurnaces));
     }
 
     function getZipdata(Request $request)
     {
-        $zipData = Zipcodes::where("zipcode", $request->zipcode)->first();
-        if($zipData){
-            return response()->json(array("message"=>"Zip Found", "data"=> $zipData));
+        $zipData = Zipcodes::select("id", "zipcode", "city", "county", "coverage", "additional_price", "duration_from_amistee", "distance_from_amistee")->where("zipcode", $request->zipcode)->first();
+        if ($zipData) {
+            return response()->json(array("message" => "Zip Found", "data" => $zipData));
         }
-        return response()->json(array("message"=>"Zipcode Not Found", "data"=> $zipData));
+        return response()->json(array("message" => "Zipcode Not Found", "data" => $zipData));
     }
 }
