@@ -86,7 +86,7 @@ class ReviewsController extends Controller
     public function store(Request $request)
     {
         try {
-            $userId = auth('api')->user()->id;
+            $userId = auth()->user() ? auth()->user()->id : '';
             $request->validate([
                 'name' => 'required',
                 'description' => 'required',
