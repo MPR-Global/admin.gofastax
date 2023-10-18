@@ -42,7 +42,7 @@ Zipcodes
                         <td>{{$item->additional_price}}</td>
                         <td>
                         <a href="editzipcode/{{$item->id}}"> <i class="fa fa-fw fa-edit"></i></a>
-                            <a href="deletezipcode/{{$item->id}}" onclick="javascript:return confirm('Are you sure! You want to delete');"><i class="fa fa-fw fa-trash-o"></i> </a>
+                            <a href="deletezipcode/{{$item->id}}" onclick="javascript:return confirm('Are you sure! You want to delete');"><i class="fa fa-fw fa-trash"></i> </a>
                         </td>
                     </tr>
                     @endforeach
