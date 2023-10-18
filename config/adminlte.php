@@ -353,7 +353,7 @@ return [
         ],
         [
             'text' => 'Log Out',
-            'url'  => 'logout',
+            'url'  => '#logout',
             'icon' => 'fas fa-fw fa-sign-out-alt',
         ],
     ],

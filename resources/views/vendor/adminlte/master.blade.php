@@ -105,6 +105,14 @@
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
 
+    <script>
+    // Attach a click event handler to the logout link
+    $(document).on('click', '.nav-sidebar .nav-item a[href="#logout"]', function(e) {
+        e.preventDefault();
+        console.log('inside logout click')
+        document.getElementById('logout-form').submit();
+    });
+</script>
 </body>
 
 </html>
